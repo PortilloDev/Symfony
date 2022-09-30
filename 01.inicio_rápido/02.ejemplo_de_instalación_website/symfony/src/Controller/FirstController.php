@@ -16,4 +16,13 @@ class FirstController extends AbstractController
             'path' => 'src/Controller/FirstController.php',
         ]);
     }
+
+    #[Route('/second', name: 'app_second')]
+    public function second(): JsonResponse
+    {
+        return $this->json([
+            'message' => 'Welcome to your second controller!',
+            'path' => 'src/Controller/FirstController.php',
+        ]);
+    }
 }
